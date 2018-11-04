@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 树形结构
  * {
@@ -57,6 +59,6 @@ function dfsTreeWithCB(node, stack = [], cb) {
   return null;
 }
 
-export default {
+module.exports = {
   dfsTreeWithCB
 };
