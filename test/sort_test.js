@@ -1,6 +1,6 @@
 'use strict';
 
-var Sort = require('../sort.js');
+var Sort = require('../lib/sort.js');
 var assert = require('assert');
 
 describe('排序测试', function() {
