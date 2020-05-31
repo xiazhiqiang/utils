@@ -2,9 +2,8 @@
   "name": "utils-demo",
   "version": "1.0.0",
   "description": "工具集示例及测试",
-  "main": "build/tool.cjs.js",
-  "module": "build/time.esm.js",
-  "browser": "build/time.umd.js",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
   "directories": {
     "test": "test"
   },
