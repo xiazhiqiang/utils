@@ -1,23 +1,30 @@
 {
-  "name": "utils",
+  "name": "utils-demo",
   "version": "1.0.0",
-  "description": "工具集",
-  "main": "index.js",
+  "description": "工具集示例及测试",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
   "directories": {
     "test": "test"
   },
+  "files": [
+    "build"
+  ],
   "engines": {
-    "node": ">=8.11.1"
+    "node": ">=10.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive --reporter list"
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "NODE_ENV=development rollup -c",
+    "test": "mocha --recursive --reporter list"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiazhiqiang/utils.git"
   },
   "keywords": [
-    "工具集"
+    "utils",
+    "demo"
   ],
   "author": "xiazhiqiang",
   "license": "MIT",
@@ -26,9 +33,22 @@
   },
   "homepage": "https://github.com/xiazhiqiang/utils#readme",
   "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-arrow-functions": "^7.10.1",
+    "@babel/plugin-transform-block-scoping": "^7.10.1",
+    "@babel/plugin-transform-classes": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@rollup/plugin-babel": "^5.0.2",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "eslint": "^5.12.0",
     "mocha": "^5.2.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "rollup": "^2.12.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-terser": "^6.1.0"
   },
   "pre-commit": [
     "test"
